@@ -1,4 +1,5 @@
 def substrings(text, dictionary)
+  text = text.downcase
   dictionary.reduce(Hash.new(0)) do |result, item|
     result[item] += 1 if text.include?(item)
     result
